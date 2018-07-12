@@ -11,7 +11,7 @@ function setConnected(connected) {
 }
 
 function connect() {
-	var ws = new WebSocket('ws:'+ window.location.href.slice(5) + '/name');
+	ws = new WebSocket('ws:'+ window.location.href.slice(5) + '/name');
 	ws.onmessage = function(data){
 		showGreeting(data.data);
 	}
